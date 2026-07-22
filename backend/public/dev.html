@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Coview Developer Console</title>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+<style>
+
+body{
+
+    font-family:Arial;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+input,select,button{
+
+    margin:5px;
+    padding:8px;
+
+}
+
+#logs{
+
+    margin-top:20px;
+
+    height:350px;
+
+    overflow:auto;
+
+    border:1px solid gray;
+
+    padding:10px;
+
+    background:#f5f5f5;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Coview Developer Console</h1>
+
+<hr>
+
+<h3>JWT</h3>
+
+<input id="token" style="width:700px;" placeholder="Paste JWT Token">
+
+<button onclick="connectSocket()">
+
+Connect
+
+</button>
+
+<hr>
+
+<h3>Party</h3>
+
+<input id="partyCode" placeholder="Party Code">
+
+<button onclick="joinRoom()">
+
+Join
+
+</button>
+
+<button onclick="leaveRoom()">
+
+Leave
+
+</button>
+
+<hr>
+
+<h3>Video</h3>
+
+<select id="provider">
+
+<option value="youtube">
+
+YouTube
+
+</option>
+
+<option value="cineby">
+
+Cineby
+
+</option>
+
+<option value="upload">
+
+Upload
+
+</option>
+
+</select>
+
+<input id="source" placeholder="Video Source">
+
+<button onclick="loadVideo()">
+
+Load Video
+
+</button>
+
+<br>
+
+<input id="time" placeholder="Current Time">
+
+<button onclick="play()">
+
+Play
+
+</button>
+
+<button onclick="pause()">
+
+Pause
+
+</button>
+
+<button onclick="seek()">
+
+Seek
+
+</button>
+
+<hr>
+
+<h3>Chat</h3>
+
+<input id="message">
+
+<button onclick="sendMessage()">
+
+Send
+
+</button>
+
+<hr>
+
+<h3>Typing</h3>
+
+<button onclick="typingStart()">
+
+Typing Start
+
+</button>
+
+<button onclick="typingStop()">
+
+Typing Stop
+
+</button>
+
+<hr>
+
+<h2>
+
+Logs
+
+</h2>
+
+<div id="logs"></div>
+
+<script src="dev.js"></script>
+
+</body>
+
+</html>

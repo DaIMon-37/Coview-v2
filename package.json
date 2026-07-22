@@ -1,0 +1,29 @@
+{
+  "name": "coview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaIMon-37/Coview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DaIMon-37/Coview/issues"
+  },
+  "homepage": "https://github.com/DaIMon-37/Coview#readme",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.3",
+    "package.json": "^2.0.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
